@@ -139,7 +139,7 @@ func newCmdOrchestrate(f *cmdutil.Factory) *cobra.Command {
 		RunE: func(cmd *cobra.Command, args []string) error {
 			io := f.IOStreams
 			task := args[0]
-			
+
 			fmt.Fprintf(io.Out, "🧠 Meta-Cognitive Analysis: %s\n", task)
 			fmt.Fprintln(io.Out, "")
 			fmt.Fprintln(io.Out, "Phase 1: Abstract Reasoning")
@@ -155,7 +155,7 @@ func newCmdOrchestrate(f *cmdutil.Factory) *cobra.Command {
 			fmt.Fprintln(io.Out, "  ✓ Meta-learning applied")
 			fmt.Fprintln(io.Out, "")
 			fmt.Fprintln(io.Out, "Orchestration complete.")
-			
+
 			return nil
 		},
 	}
