@@ -10,6 +10,7 @@ import (
 	actionsCmd "github.com/cli/cli/v2/pkg/cmd/actions"
 	agentTaskCmd "github.com/cli/cli/v2/pkg/cmd/agent-task"
 	aliasCmd "github.com/cli/cli/v2/pkg/cmd/alias"
+	gitcogCmd "github.com/cli/cli/v2/pkg/cmd/gitcog"
 	"github.com/cli/cli/v2/pkg/cmd/alias/shared"
 	apiCmd "github.com/cli/cli/v2/pkg/cmd/api"
 	attestationCmd "github.com/cli/cli/v2/pkg/cmd/attestation"
@@ -133,6 +134,7 @@ func NewCmdRoot(f *cmdutil.Factory, version, buildDate string) (*cobra.Command, 
 	cmd.AddCommand(configCmd.NewCmdConfig(f))
 	cmd.AddCommand(creditsCmd.NewCmdCredits(f, nil))
 	cmd.AddCommand(gistCmd.NewCmdGist(f))
+	cmd.AddCommand(gitcogCmd.NewCmdGitCog(f))
 	cmd.AddCommand(gpgKeyCmd.NewCmdGPGKey(f))
 	cmd.AddCommand(completionCmd.NewCmdCompletion(f.IOStreams))
 	cmd.AddCommand(extensionCmd.NewCmdExtension(f))
